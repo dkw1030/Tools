@@ -81,6 +81,9 @@ public class TextWriter {
             throw new IOException("输出路径已存在但不是一个目录: " + OUTPUT_DIR);
         }
     }
+    public static void cycleTextToOutput(String text, String fileName) throws IOException {
+        cycleTextToOutput(java.util.Arrays.asList(text), fileName);
+    }
     
     /**
      * 将多段文本循环输出到文本文件中（智能模式）
